@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: #EEEEEE;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.admin {
+    margin-top: 12vh;
+    align-self: center;
+    display: block;
+    color: #03A9F4;
+}
+
+.Admincontainer {
+    display: flex;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border-radius: 20px;
+    width: 70%;
+    justify-content: space-between;
+    min-height: 40vh;
+}
+
+.Admincontainer .adminbutton {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: auto;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px 35px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #03A9F4;
+    transition: .4s;
+}
+
+.Admincontainer .adminbutton:hover {
+    transform: translateY(10px);
+    transition: .4s;
+}
+
+@media screen and (max-width:1000px) {
+    .Admincontainer {
+        display: block;
+    }
+    .Admincontainer .adminbutton {
+        display: block;
+        margin-bottom: 20px;
+    }
+}

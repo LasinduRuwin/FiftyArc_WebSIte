@@ -1,0 +1,37 @@
+.footer {
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    display: block;
+    padding: 25px;
+    color: #fff;
+    background-color: #039BE5;
+    animation: footerAnim .4s ease-in;
+}
+
+.footer ul {
+    list-style: none;
+    display: block;
+    line-height: 25px;
+    margin-top: 10px;
+}
+
+.footer p {
+    align-self: flex-end;
+    width: 100%;
+    text-align: center;
+}
+
+.footer i {
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+@keyframes footerAnim {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

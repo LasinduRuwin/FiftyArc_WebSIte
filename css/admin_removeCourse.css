@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: #EEEEEE;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-image: url(../assets/img/bg_contact.jpg);
+    background-size: cover;
+}
+
+.main-container {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+    margin-top: 90px;
+    background: #fff;
+    border-radius: 20px;
+    min-height: 85vh;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.3);
+    animation: acounts-anim .8s ease-in-out;
+}
+
+.Remove-courses {
+    margin: 10px;
+    color: #03A9F4;
+}
+
+
+/* scrool view */
+
+.scrollview {
+    overflow-y: scroll;
+    height: 1000px;
+    scroll-behavior: smooth;
+    padding-right: 17px;
+    border: #03A9F4 1px solid;
+    border-radius: 20px;
+    /* border-right-color: #fff; */
+    /* border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; */
+    box-sizing: content-box;
+}
+
+.scrollview .field {
+    margin: 10px;
+    align-content: center;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 20px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #03A9F4;
+    border-radius: 50px;
+    transition: .4s;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #4fc7ff;
+    border-radius: 50px;
+    transition: .4s;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    border: #03A9F4 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.wrapper img {
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.wrapper .secondwrapper {
+    display: block;
+    margin-left: 10px;
+}
+
+.wrapper .secondwrapper a {
+    text-decoration: none;
+    border: #03A9F4 2px solid;
+    border-radius: 22px;
+    color: #03A9F4;
+    padding: 5px;
+    transition: .4s;
+}
+
+.wrapper .secondwrapper a:hover {
+    text-decoration: none;
+    background: red;
+    color: #fff;
+    border: red 2px solid;
+    border-radius: 22px;
+    padding: 5px;
+    transition: .2s;
+}
+
+@media screen AND (max-width:700px) {
+    .main-container {
+        width: 85%;
+    }
+    .wrapper {
+        display: block;
+    }
+}
+
+@keyframes acounts-anim {
+    0% {
+        transform: scale(0%);
+    }
+    60% {
+        transform: scale(110%);
+    }
+    80% {
+        transform: scale(90%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}

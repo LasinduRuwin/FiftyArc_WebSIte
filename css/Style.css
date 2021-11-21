@@ -1,0 +1,820 @@
+/*=================================================
+GLOBAL STYLES    
+===================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: #EEEEEE;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+/*=================================================
+HOME PAGE STYLES    
+===================================================*/
+
+
+/*homepage hero Section */
+
+.hero {
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    width: 100%;
+    isolation: isolate;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* carousel */
+
+.hero .slider {
+    position: absolute;
+    display: flex;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: carouselanimate 10s linear infinite;
+    z-index: -2;
+}
+
+@keyframes carouselanimate {
+    0% {
+        background: url("../assets/img/home1.jpg");
+        background-size: cover;
+    }
+    20% {
+        background: url("../assets/img/home1.jpg");
+        background-size: cover;
+    }
+    25% {
+        background: url("../assets/img/home2.jpg");
+        background-size: cover;
+    }
+    26% {
+        background: url("../assets/img/home2.jpg");
+        background-size: cover;
+    }
+    45% {
+        background: url("../assets/img/home2.jpg");
+        background-size: cover;
+    }
+    50% {
+        background: url("../assets/img/home3.jpg");
+        background-size: cover;
+    }
+    70% {
+        background: url("../assets/img/home3.jpg");
+        background-size: cover;
+    }
+    75% {
+        background: url("../assets/img/home4.jpg");
+        background-size: cover;
+    }
+    95% {
+        background: url("../assets/img/home4.jpg");
+        background-size: cover;
+    }
+    100% {
+        background: url("../assets/img/home1.jpg");
+        background-size: cover;
+    }
+}
+
+
+/* carousel end */
+
+.hero-intro {
+    width: 40%;
+    padding: 1em;
+    padding-top: min(15vh, 10rem);
+}
+
+.hero-intro::after {
+    width: 40%;
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #03A9F4;
+    mix-blend-mode: multiply;
+    animation: heroslide .5s ease-out;
+}
+
+.hero .hero-intro h1 {
+    text-transform: uppercase;
+    font-size: clamp(2rem, 5vw + 0.5rem, 5rem);
+    line-height: 0.9;
+    margin: 0;
+    color: #ffca68;
+    animation: hero-text-downwards .5s ease-in;
+}
+
+.hero .hero-intro p {
+    animation: hero-text-upwards .5s ease-in;
+}
+
+.hero .hero-intro code {
+    display: block;
+    width: max-content;
+    background: white;
+    font-size: 0.5em;
+    color: #03A9F4;
+    padding: 0.25em 0.5em;
+    border-radius: 0.1em;
+    margin-bottom: 0.5em;
+}
+
+@keyframes heroslide {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hero-text-downwards {
+    0% {
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hero-text-upwards {
+    0% {
+        transform: translateY(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/*homepage Section 02 Vision and Mission Cards*/
+
+.home-wrapper {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.home-cards {
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home-cards .home-singlecard {
+    background: #fff;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    min-width: 400px;
+    max-width: 600px;
+    min-height: 400px;
+    padding: 20px;
+    line-height: 20px;
+    color: #8e8b8b;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.home-cards .home-singlecard h3 {
+    color: black;
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.home-cards .home-singlecard p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*homepage Section 02 Vision and Mission Cards end*/
+
+
+/*=================================================
+PAGE HEADER  STYLES    
+===================================================*/
+
+.img-overlay {
+    background-color: #03A9F4;
+    mix-blend-mode: multiply;
+}
+
+.page-heading {
+    text-align: center;
+    background-image: url(../assets/img/AboutUs.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px 100px 0px;
+    color: #fff;
+    z-index: -2;
+}
+
+.page-heading h1 {
+    animation: .5s about-heading ease-in-out;
+}
+
+@keyframes about-heading {
+    0% {
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.page-heading .heading h1 {
+    text-transform: capitalize;
+    font-size: 36px;
+    font-family: 'Varela Round', sans-serif;
+    padding-top: 100px;
+}
+
+
+/*=================================================
+ABOUT US PAGE STYLES    
+===================================================*/
+
+.about-container {
+    width: 90%;
+    margin: 25px auto;
+    padding: 1rem;
+    min-height: 50vh;
+    box-shadow: 0 4px 8px 4px rgba(0, 150, 255, 0.5);
+}
+
+.about-container .about-sub-heading {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Varela Round', sans-serif;
+    animation: about-sub-heading .5s ease-in-out;
+}
+
+@keyframes about-sub-heading {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.about-container hr {
+    width: 90%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.about-container .about-text p {
+    padding: 0 10px 0 5px;
+    justify-content: center;
+    text-align: justify;
+    text-align: left;
+    line-height: 1.8rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-style: oblique;
+    animation: about-para .4s ease-in;
+}
+
+@keyframes about-para {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+/*=================================================
+CONTACT US PAGE STYLES    
+===================================================*/
+
+.contact-body {
+    background-image: url(../assets/img/bg_contact.jpg);
+    z-index: -5;
+}
+
+.contact-container {
+    min-height: 90vh;
+    width: 100%;
+    align-content: center;
+    /* background-image: url(../assets/img/bg_contact.jpg); */
+    background-size: cover;
+}
+
+.contactForm {
+    display: flex;
+    margin-top: 20vh;
+    margin-bottom: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 50em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 4px rgba(0, 150, 255, 0.5);
+    animation: contactAnim .9s ease-in-out;
+}
+
+.contactForm form {
+    width: 80%;
+    padding: 40px;
+    border-left: 2px solid rgba(0, 150, 255, 0.5);
+    border-radius: 10px;
+}
+
+.contactForm h2 {
+    font-size: 25px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputbox {
+    position: relative;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.contactForm .inputbox input,
+.contactForm .inputbox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #fff;
+    z-index: -1;
+}
+
+.contactForm .inputbox input:focus~span,
+.contactForm .inputbox input:valid~span,
+.contactForm .inputbox textarea:focus~span,
+.contactForm .inputbox textarea:valid~span {
+    color: #1eb0e9;
+    font-size: 15px;
+    z-index: 5;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputbox input[type="submit"] {
+    width: 100px;
+    background: #03A9F4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.contactForm .inputbox input[type="submit"]:hover {
+    background: #089;
+    transform: translateY(8px);
+    transition: .3s;
+}
+
+.contactForm .inputbox input[type="submit"]:active {
+    background: #03A9F4;
+    transform: translateY(15px);
+    transition: .4s;
+}
+
+@media screen and (max-width: 800px) {
+    .contactForm {
+        display: block;
+    }
+    .contact-container img {
+        width: 100%;
+        border-bottom: 2px solid rgba(0, 150, 255, 0.5);
+        border-right: none;
+    }
+    .contactForm form {
+        border-top: 2px solid rgba(0, 150, 255, 0.5);
+        border-left: none;
+        width: 100%;
+    }
+}
+
+@keyframes contactAnim {
+    0% {
+        transform: scale(0%);
+    }
+    60% {
+        transform: scale(110%);
+    }
+    80% {
+        transform: scale(90%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+
+/*=================================================
+COURSES PAGE STYLES    
+===================================================*/
+
+
+/* course-container-main
+course-card
+course-img
+course-title
+course-intro
+view-more-btn */
+
+.course-container-main {
+    justify-content: space-between;
+    display: block;
+    margin-top: 5vh;
+    padding-top: 5vh;
+    text-align: center;
+}
+
+.course-heading {
+    color: #03A9F4;
+    animation: course-heading-anim .5s ease-out;
+}
+
+@keyframes course-heading-anim {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.course-container-sub {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    position: relative;
+    display: block;
+    width: 300px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    min-height: 580px;
+    animation: course-card-anim .9s ease-in-out;
+}
+
+@keyframes course-card-anim {
+    0% {
+        transform: scale(0%);
+    }
+    60% {
+        transform: scale(110%);
+    }
+    80% {
+        transform: scale(90%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.course-img {
+    padding: 1em;
+}
+
+.course-img img {
+    width: 100%;
+    height: 300px;
+}
+
+.course-title {
+    color: #03A9F4;
+}
+
+.course-intro {
+    color: black;
+    font-weight: 600;
+    padding: 1em;
+}
+
+.course-container-main .course-container-sub .view-more-btn {
+    margin-left: 28%;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 40%;
+    background-color: #03A9F4;
+    border-radius: 10px;
+}
+
+.course-container-main .course-container-sub .view-more-btn a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    width: 100%;
+}
+
+.course-container-main .course-container-sub .view-more-btn:hover {
+    background-color: #e91e63;
+    cursor: pointer;
+    transition: .4s;
+}
+
+
+/*=================================================
+SIGNIN & SIGNUP PAGE STYLES    
+===================================================*/
+
+.signin-and-signup-body {
+    background-image: url(../assets/img/bg_contact.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.signin-and-signup-form {
+    width: 400px;
+    height: 550px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 15px;
+    margin: 150px auto 0;
+    text-align: center;
+    border-radius: 10px;
+    animation: signin-and-signup-anim .8s;
+}
+
+@keyframes signin-and-signup-anim {
+    0% {
+        transform: scale(0%);
+    }
+    60% {
+        transform: scale(110%);
+    }
+    80% {
+        transform: scale(90%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.signin-and-signup-form h1 {
+    color: #03A9F4;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.signin-and-signup-form i {
+    transform: translateY(-50px);
+    color: #03A9F4;
+    font-size: 60px;
+    background-color: #fff;
+    border: 2px solid #03A9F4;
+    border-radius: 100%;
+    box-shadow: 4px 4px 6px rgba(0, 100, 255, 0.8);
+}
+
+.inputbox-signin-and-signup {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #333;
+    outline: none;
+}
+
+.signin-and-signup-btn {
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #03A9F4;
+    transition: .3s;
+}
+
+.signin-and-signup-btn:hover {
+    cursor: pointer;
+    background-color: #0487d1;
+    transform: translateY(6px);
+    transition: .3s;
+}
+
+.signin-and-signup-btn:active {
+    cursor: pointer;
+    background-color: #4ec2f7;
+    transition: .3s;
+}
+
+.signin-and-signup-form p {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signin-and-signup-form a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #03A9F4;
+}
+
+.signin-and-signup-form a:hover {
+    color: #0487d1;
+    transition: .3s;
+}
+
+
+/*=================================================
+COURSE DETAILS PAGE STYLES    
+===================================================*/
+
+.course-wrapper {
+    padding-top: 80px;
+    justify-content: center;
+}
+
+.imgcontainer {
+    width: 60%;
+    margin: auto;
+}
+
+.imgcontainer img {
+    height: 450px;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.course-detail-title {
+    color: #fff;
+    background: #03A9F4;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(35px);
+}
+
+.course-detail-title h2 {
+    padding: 20px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.course-info-container {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    display: flex;
+}
+
+.course-info-container .course-desc {
+    color: #8e8b8b;
+    background: #fff;
+    padding: 10px;
+    padding-right: 60px;
+    justify-content: left;
+    min-height: 600px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.course-info-container .course-desc p {
+    padding: 20px;
+    margin-right: 20px;
+    justify-content: left;
+}
+
+.side-info {
+    position: absolute;
+    background: #4ec2f7;
+    border-radius: 10px;
+    height: 600px;
+    width: 230px;
+    margin-left: 60%;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.side-info h3 {
+    padding-left: 25px;
+    color: cornsilk;
+}
+
+.side-info p {
+    padding-left: 40px;
+}
+
+.side-info hr {
+    border: 1px solid #03A9F4;
+}
+
+.side-info a {
+    margin-left: 30%;
+    margin-top: 30px;
+    padding: .5rem;
+    color: #fff;
+    width: 230px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+.side-info a:hover {
+    border-color: #0487d1;
+    transition: .2s;
+}
+
+@media screen and (max-width:1100px) {
+    .side-info {
+        position: relative;
+        margin-left: 0;
+        width: 30%;
+    }
+    .course-info-container .course-desc {
+        padding: 10px;
+        justify-content: left;
+        min-height: 600px;
+        width: 70%;
+    }
+    .side-info a {
+        margin-left: 25%;
+    }
+    .course-detail-title {
+        margin-top: 0;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .course-info-container {
+        width: 100%;
+    }
+    .side-info {
+        position: relative;
+        margin-left: 0;
+        width: 30%;
+    }
+    .course-info-container .course-desc {
+        padding: 10px;
+        justify-content: left;
+        min-height: 600px;
+        width: 70%;
+    }
+    .side-info a {
+        margin-left: 25%;
+    }
+    .imgcontainer {
+        padding-top: 0;
+        width: 100%;
+        margin: 0
+    }
+    .course-detail-title {
+        margin-top: 0;
+        transform: translateY(0);
+    }
+}

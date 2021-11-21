@@ -1,0 +1,165 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    animation: navtransform .4s ease-in-out;
+    color: black;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.brand-icon {
+    height: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.brand-icon a img {
+    height: 50px;
+}
+
+.navbar-links {
+    transition: .5s ease-in 2s;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: black;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    display: block;
+    margin: 15px 0 15px 0;
+}
+
+.navbar-links li:hover {
+    background-color: #03A9F4;
+    transition: .4s;
+}
+
+.navbar-links li a:hover {
+    color: white;
+    transition: .3s;
+}
+
+.navbar-links li.active,
+.navbar-links li a.active {
+    color: #03A9F4;
+    height: 100%;
+    padding-top: 33%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 2px solid #03A9F4;
+    border-radius: 5px;
+}
+
+
+/*Special active class for contact us entry
+Note: The legth of the text is effecting the possition of the text*/
+
+.navbar-links li.active-long,
+.navbar-links li a.active-long {
+    color: #03A9F4;
+    height: 100%;
+    padding-top: 22%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 2px solid #03A9F4;
+    border-radius: 5px;
+}
+
+.toggle-menu {
+    position: fixed;
+    top: .75rem;
+    right: .1rem;
+    display: none;
+    margin-top: 5px;
+    margin-right: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 21px;
+}
+
+.toggle-menu .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .toggle-menu {
+        display: flex;
+    }
+    .navbar-links {
+        width: 100%;
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        margin: 15px 0 15px 0;
+        padding: .5rem 1rem;
+    }
+    .navbar-links li.active,
+    .navbar-links li a.active {
+        color: #03A9F4;
+        padding-top: 4%;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 0;
+        margin-bottom: 0;
+        border: none;
+        border-radius: 5px;
+    }
+    .navbar-links li.active-long,
+    .navbar-links li a.active-long {
+        color: #03A9F4;
+        height: 100%;
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        border: none;
+        border-radius: 5px;
+    }
+    .navbar-links.active-menu {
+        display: flex;
+        animation: navtransform .4s;
+    }
+}
+
+@keyframes navtransform {
+    0% {
+        transform-origin: top;
+        transform: scale(1, 0);
+    }
+    100% {
+        transform-origin: top;
+        transform: scale(1, 1);
+    }
+}
